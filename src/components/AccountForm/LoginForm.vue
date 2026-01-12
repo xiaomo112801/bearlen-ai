@@ -136,7 +136,14 @@ function testAccount(account: string) {
         {{ title }}
       </p>
     </FaBlurReveal>
-
+    <div class="mb-4">
+      <FaTabs
+        v-model="type" :list="[
+          { label: t('accountLogin'), value: 'default' },
+          { label: t('qrcodeLogin'), value: 'qrcode' },
+        ]" class="inline-flex"
+      />
+    </div>
     <div v-show="type === 'default'">
       <form @submit="onSubmit">
         <FormField v-slot="{ componentField, errors }" name="account">
@@ -171,11 +178,31 @@ function testAccount(account: string) {
               </FormItem>
             </FormField>
           </div>
+          <FaButton variant="link" class="h-auto p-0" type="button" @click="emits('onResetPassword', form.values.account)">
+            {{ t('forget') }}
+          </FaButton>
         </div>
         <FaButton :loading="loading" size="lg" class="w-full" type="submit">
           {{ t('form.login') }}
         </FaButton>
+        <div class="mt-4 flex-center gap-2 text-sm">
+          <span class="text-secondary-foreground op-50">{{ t('noAccount') }}</span>
+          <FaButton variant="link" class="h-auto p-0" type="button" @click="emits('onRegister', form.values.account)">
+            {{ t('register') }}
+          </FaButton>
+        </div>
       </form>
+      <div class="mt-4 text-center -mb-4">
+        <FaDivider>{{ t('testLogin') }}</FaDivider>
+        <div class="space-x-2">
+          <FaButton variant="default" size="sm" plain @click="testAccount('admin')">
+            admin
+          </FaButton>
+          <FaButton variant="outline" size="sm" plain @click="testAccount('test')">
+            test
+          </FaButton>
+        </div>
+      </div>
     </div>
     <div v-show="type === 'qrcode'">
       <div class="flex-col-center">

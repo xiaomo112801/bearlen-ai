@@ -10,7 +10,7 @@
   "route": {
     "multimenu": {
       "root": "多级导航",
-      "page": "导航1",
+      "page1": "导航1222",
       "level2": {
         "root": "导航2",
         "page": "导航2-1",
@@ -25,8 +25,7 @@
       "root": "配置"
     },
     "user": {
-      "root": "用户",
-      "userInfo": "用户信息"
+      "root": "用户"
     },
     "system": {
       "root": "系统"
@@ -41,7 +40,9 @@
       "root": "字典"
     },
     "ai": {
-      "root": "AI"
+      "root": "会话",
+      "aiIndex": "对话"
     }
+
   }
 }

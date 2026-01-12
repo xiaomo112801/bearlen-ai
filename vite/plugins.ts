@@ -5,14 +5,12 @@ import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import vueLegacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-
 import { AntDesignXVueResolver } from 'ant-design-x-vue/resolver'
 import boxen from 'boxen'
 import picocolors from 'picocolors'
 import Unocss from 'unocss/vite'
 import autoImport from 'unplugin-auto-import/vite'
 import TurboConsole from 'unplugin-turbo-console/vite'
-import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import components from 'unplugin-vue-components/vite'
 import { loadEnv } from 'vite'
 import AppLoading from 'vite-plugin-app-loading'
@@ -71,12 +69,7 @@ export default function createVitePlugins(mode: string, isBuild = false) {
         'src/components/*/index.vue',
       ],
       dts: './src/types/components.d.ts',
-      resolvers: [
-        AntDesignVueResolver({
-          importStyle: false, // 因为已经在 ui/provider/index.ts 中全局引入了样式
-        }),
-        AntDesignXVueResolver(),
-      ],
+      resolvers: [AntDesignXVueResolver()],
     }),
 
     Unocss(),

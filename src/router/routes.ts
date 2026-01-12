@@ -4,7 +4,7 @@ import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:meta-layouts'
 import { $t } from '@/locales'
 import pinia from '@/store'
-import AI from './modules/ai'
+import Ai from './modules/ai'
 import Config from './modules/config'
 import Customer from './modules/customer'
 import Dictionary from './modules/dictionary'
@@ -82,7 +82,16 @@ const asyncRoutes: Route.recordMainRaw[] = [
       icon: 'i-heroicons-solid:sparkles',
     },
     children: [
-      AI,
+      Ai,
+    ],
+  },
+  {
+    meta: {
+      title: '客户',
+      icon: 'i-heroicons-solid:user',
+    },
+    children: [
+      Customer,
     ],
   },
   {
@@ -92,16 +101,6 @@ const asyncRoutes: Route.recordMainRaw[] = [
     },
     children: [
       User,
-    ],
-  },
-
-  {
-    meta: {
-      title: '客户',
-      icon: 'i-heroicons-solid:user',
-    },
-    children: [
-      Customer,
     ],
   },
   {
@@ -125,17 +124,16 @@ const asyncRoutes: Route.recordMainRaw[] = [
   {
     meta: {
       title: '配置',
-      icon: 'i-heroicons-solid:cog',
+      icon: 'i-heroicons-solid:cog-6-tooth',
     },
     children: [
       Config,
-
     ],
   },
   {
     meta: {
       title: '系统',
-      icon: 'i-heroicons-solid:cog',
+      icon: 'i-heroicons-solid:cog-6-tooth',
     },
     children: [
       System,

@@ -14,7 +14,6 @@
       "vite-plugin-vue-meta-layouts/client",
       "@intlify/unplugin-vue-i18n/messages",
       "vite-plugin-app-loading/client"
-
     ],
     "allowJs": false,
     "strict": true,

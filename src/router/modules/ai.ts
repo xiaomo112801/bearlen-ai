@@ -11,7 +11,7 @@ const routes: RouteRecordRaw = {
   name: 'ai',
   meta: {
     title: $t('route.ai.root'),
-    icon: 'i-heroicons-solid:sparkles',
+    icon: 'i-heroicons-solid:chat-bubble-bottom-center-text',
   },
   children: [
     {
@@ -19,7 +19,8 @@ const routes: RouteRecordRaw = {
       name: 'aiIndex',
       component: () => import('@/views/ai/index.vue'),
       meta: {
-        title: $t('route.ai.root'),
+        title: $t('route.ai.aiIndex'),
+        menu: false,
       },
     },
   ],

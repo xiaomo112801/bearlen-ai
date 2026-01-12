@@ -19,7 +19,7 @@ const routes: RouteRecordRaw = {
       name: 'multilevelMenuExample1',
       component: () => import('@/views/multilevel_menu_example/page.vue'),
       meta: {
-        title: $t('route.multimenu.page'),
+        title: $t('route.multimenu.page1'),
       },
     },
     {
