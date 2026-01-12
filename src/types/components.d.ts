@@ -13,7 +13,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AccountButton: typeof import('./../components/AccountButton/index.vue')['default']
-    AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
     FaAnimatedBeam: typeof import('./../ui/components/FaAnimatedBeam/index.vue')['default']
     FaAnimatedCountTo: typeof import('./../ui/components/FaAnimatedCountTo/index.vue')['default']
     FaAnimatedCountToGroup: typeof import('./../ui/components/FaAnimatedCountToGroup/index.vue')['default']
@@ -94,7 +93,6 @@ declare module 'vue' {
     FaTooltip: typeof import('./../ui/components/FaTooltip/index.vue')['default']
     FaTree: typeof import('./../ui/components/FaTree/index.vue')['default']
     FaTrend: typeof import('./../ui/components/FaTrend/index.vue')['default']
-    PcasCascader: typeof import('./../components/PcasCascader/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
@@ -103,7 +101,6 @@ declare module 'vue' {
 // For TSX support
 declare global {
   const AccountButton: typeof import('./../components/AccountButton/index.vue')['default']
-  const AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
   const FaAnimatedBeam: typeof import('./../ui/components/FaAnimatedBeam/index.vue')['default']
   const FaAnimatedCountTo: typeof import('./../ui/components/FaAnimatedCountTo/index.vue')['default']
   const FaAnimatedCountToGroup: typeof import('./../ui/components/FaAnimatedCountToGroup/index.vue')['default']
@@ -184,7 +181,6 @@ declare global {
   const FaTooltip: typeof import('./../ui/components/FaTooltip/index.vue')['default']
   const FaTree: typeof import('./../ui/components/FaTree/index.vue')['default']
   const FaTrend: typeof import('./../ui/components/FaTrend/index.vue')['default']
-  const PcasCascader: typeof import('./../components/PcasCascader/index.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
 }
