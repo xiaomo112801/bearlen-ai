@@ -6,7 +6,7 @@ export default {
     account: string
     password: string
   }) => api.post('admin/sign', data, {
-    baseURL: '',
+
   }),
 
   // 获取权限
