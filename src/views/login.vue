@@ -8,8 +8,6 @@ meta:
 
 <script setup lang="ts">
 import LoginForm from '@/components/AccountForm/LoginForm.vue'
-import RegisterForm from '@/components/AccountForm/RegisterForm.vue'
-import ResetPasswordForm from '@/components/AccountForm/ResetPasswordForm.vue'
 import ColorScheme from '@/layouts/components/Topbar/Toolbar/ColorScheme/index.vue'
 import Language from '@/layouts/components/Topbar/Toolbar/I18n/index.vue'
 import themes from '../../themes'
@@ -88,16 +86,16 @@ const formType = ref<'login' | 'register' | 'resetPassword'>('login')
           @on-register="(val) => { formType = 'register'; account = val }"
           @on-reset-password="(val) => { formType = 'resetPassword'; account = val }"
         />
-        <RegisterForm
+        <!-- <RegisterForm
           :account
           @on-register="(val) => { formType = 'login'; account = val }"
           @on-login="formType = 'login'"
-        />
-        <ResetPasswordForm
+        /> -->
+        <!-- <ResetPasswordForm
           :account
           @on-reset-password="(val) => { formType = 'login'; account = val }"
           @on-login="formType = 'login'"
-        />
+        /> -->
       </FaSmoothSwipe>
     </div>
   </div>

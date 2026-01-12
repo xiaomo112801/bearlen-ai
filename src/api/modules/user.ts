@@ -5,8 +5,8 @@ export default {
   login: (data: {
     account: string
     password: string
-  }) => api.post('user/login', data, {
-    baseURL: '/mock/',
+  }) => api.post('admin/sign', data, {
+    baseURL: '',
   }),
 
   // 获取权限
